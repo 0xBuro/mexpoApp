@@ -15,8 +15,8 @@ import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import coil.imageLoader
 import com.burakbo.mexpoapp.data.remote.api.BitpandaApi
 import com.burakbo.mexpoapp.data.remote.dto.BitpandaDto
 import com.burakbo.mexpoapp.ui.theme.MexpoAppTheme
@@ -64,6 +64,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+@OptIn(ExperimentalCoilApi::class)
 fun CoilImg() {
     Box(
         modifier = Modifier
